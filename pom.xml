@@ -9,7 +9,7 @@
   <name>Simple PMD test (Parent)</name>
   <modules>
     <module>pmd-java8</module>
-    <module>pmd-java16</module>
+    <module>pmd-java13</module>
   </modules>
   <properties>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
@@ -17,5 +17,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
+    <pmd.plugin.version>3.13.0</pmd.plugin.version>
   </properties>
 </project>

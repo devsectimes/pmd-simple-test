@@ -23,6 +23,16 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${compiler-plugin.version}</version>
         </plugin>
+        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${pmd.plugin.version}</version>
+                <configuration>
+        <includeTests>true</includeTests>
+        <failOnViolation>false</failOnViolation>
+        <skipEmptyReport>false</skipEmptyReport>
+      </configuration>
+            </plugin>
       </plugins>
     </pluginManagement>
   </build>
