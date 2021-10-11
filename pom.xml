@@ -17,6 +17,93 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
-    <pmd.plugin.version>3.13.0</pmd.plugin.version>
+    <pmd.plugin.version>3.15.0</pmd.plugin.version>
   </properties>
+
+
+  <distributionManagement>
+    <site>
+        <id>devsectimes.com</id>
+        <url>https://devsectimes.com/reports/</url>
+      </site>
+  </distributionManagement>
+
+
+  <build>
+
+
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${compiler-plugin.version}</version>
+        </plugin>
+        <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${pmd.plugin.version}</version>
+                <configuration>
+        <includeTests>true</includeTests>
+        <failOnViolation>false</failOnViolation>
+        <skipEmptyReport>false</skipEmptyReport>
+      </configuration>
+            </plugin>
+
+
+
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.8.2</version>
+          <configuration>
+              <relativizeDecorationLinks>false</relativizeDecorationLinks>
+          </configuration>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jxr-plugin</artifactId>
+            <version>3.1.1</version>
+            <reportSets>
+          <reportSet>
+            <id>aggregate</id>
+            <inherited>false</inherited>
+            <reports>
+              <report>aggregate</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+        </plugin>
+
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${pmd.plugin.version}</version>
+        <configuration>
+                    <rulesets>
+                        <ruleset>/category/java/codestyle.xml</ruleset>
+                    </rulesets>
+                </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>pmd</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+
+      </plugin>
+    </plugins>
+</reporting>
+
 </project>
