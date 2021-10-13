@@ -18,11 +18,12 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
     <github.global.server>github</github.global.server>
-    <github.site.path>${project.version}</github.site.path>
+    <github.site.path></github.site.path>
     <pmd.plugin.version>3.15.0</pmd.plugin.version>
+
   </properties>
 
-  <url>https://devsectimes.com/pmd-simple-test/${project.version}/</url>
+  <url>https://devsectimes.com/pmd-simple-test/</url>
 
   <distributionManagement>
     <site>

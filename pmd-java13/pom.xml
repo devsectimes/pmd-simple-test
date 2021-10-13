@@ -13,10 +13,10 @@
   <properties>
     <maven.compiler.source>13</maven.compiler.source>
     <maven.compiler.target>13</maven.compiler.target>
-    <github.site.path>${project.version}/B/${project.artifactId}</github.site.path>
+    <github.site.path>${project.artifactId}</github.site.path>
   </properties>
 
-<url>https://devsectimes.com/pmd-simple-test/${project.version}/B/${project.artifactId}/</url>
+<url>https://devsectimes.com/pmd-simple-test/${project.artifactId}/</url>
 
   <distributionManagement>
     <site>

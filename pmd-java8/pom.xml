@@ -14,11 +14,11 @@
     <properties>
       <maven.compiler.source>8</maven.compiler.source>
       <maven.compiler.target>8</maven.compiler.target>
-      <github.site.path>${project.version}/A/${project.artifactId}</github.site.path>
+      <github.site.path>${project.artifactId}</github.site.path>
     </properties>
 
 
-    <url>https://devsectimes.com/pmd-simple-test/${project.version}/A/${project.artifactId}/</url>
+    <url>https://devsectimes.com/pmd-simple-test/${project.artifactId}/</url>
 
       <distributionManagement>
         <site>
